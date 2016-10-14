@@ -85,13 +85,13 @@ document.querySelector("#remove button").addEventListener('click',function(){
   var activeAndInactive = document.querySelectorAll('#user-list li')
       //console.log( activeAndInactive )
       for (var i = 0; i < activeAndInactive.length; i++) {
-      //console.log(activeAndInactive[i]);
-      var allUser = activeAndInactive[i]
-      //console.log(allUser);
-      if (allUser.classList.contains('inactive') === false){
-         userListEl.removeChild(allUser)
-      } else (allUser.classList.contains('inactive') === false)
-         userListEl.appendChild(allUser)
+         //console.log(activeAndInactive[i]);
+         var allUser = activeAndInactive[i]
+         //console.log(allUser);
+         if (allUser.classList.contains('active') !== true){
+            console.log(allUser)
+            userListEl.removeChild(allUser)
+         }
       }
 
 
